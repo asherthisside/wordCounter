@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Text</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter(or paste) the text here</h1>
+        <form action="result" method="post">
+            {% csrf_token %}
+            <textarea name="text" id="textarea" cols="100" rows="5" placeholder="Enter or paste the text here"></textarea> <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
